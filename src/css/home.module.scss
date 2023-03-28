@@ -3,7 +3,7 @@
 }
 .disapear-on-small-screen{
     @media  screen and (max-width: 810px) {
-        display:none !important;
+        display:none;
     }
 }
 .imgoo{
@@ -30,4 +30,111 @@
     @extend .absolute;
     @extend .disapear-on-small-screen
     
+}
+
+.vsCode{
+    @extend .absolute;
+    top:30%;
+    right:calc(10% - 30px);
+    width:60px;
+    @media  screen and (max-width: 810px) {
+        width:45px;
+        top:10%;
+        right:calc(17% - 15px);
+    }
+}
+.bulb{
+    @extend .absolute;
+    top:30%;
+    width:13vw;
+    left:-25px;
+    @media  screen and (max-width: 810px) {
+        width:calc(30% - 20px);
+        top:10%;
+        left:0%;
+    }
+}
+.imgoo2{
+    @extend .absolute;
+    top:50%;
+    width:20px;
+    left:35px;
+    @media  screen and (max-width: 810px) {
+        width:12px;
+        top:40%;
+        left:15%;
+    }
+}
+.triangle{
+    @extend .absolute;
+    top:50%;
+    right:calc(10% - 30px);
+    width:20px;
+    @media  screen and (max-width: 810px) {
+        width:15px;
+        top:35%;
+        right:calc(17% - 15px);
+    }
+}
+.figma{
+    @extend .absolute;
+    top:65%;
+    width:4.5vw;
+    left:-25px;
+    @media  screen and (max-width: 900px) {
+       
+        top:75%;
+        
+    }
+    @media  screen and (max-width: 810px) {
+        width:40px;
+        top:58%;
+        left:5%;
+    }
+}
+.wordPress{
+    @extend .absolute;
+    right:calc(5% - 5px);
+    bottom:7%;
+    width:50px;
+    @media  screen and (max-width: 810px) {
+        width:40px;
+        bottom:5%;
+        right:calc(5% - 5px);
+    }
+}
+.imgo2{
+    @extend .absolute;
+    bottom:12%;
+    width:10px;
+    left:35px;
+    @media  screen and (max-width: 810px) {
+        width:8px;
+        bottom:14%;
+        left:15%;
+    }
+}
+
+.ani1{
+    animation: aniProfile1 2s ease-in-out 0.5s 1  forwards;
+}
+.ani2{
+    animation: aniProfile2 2s ease-in-out 0.5s 1  forwards;
+}
+
+@keyframes aniProfile1 {
+    0%{
+        left:-10vw;
+    }
+    100%{
+        left:0;
+    }
+}
+@keyframes aniProfile2 {
+    0%{
+        right:-10vw;
+    }
+    100%{
+        right:0;
+    }
 }

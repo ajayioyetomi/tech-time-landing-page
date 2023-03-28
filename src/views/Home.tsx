@@ -12,6 +12,12 @@ import hero_girl from '../assets/hero-girl.png';
 import imgoo from '../assets/oo.png';
 import imgo from '../assets/o.png';
 import zigZag from '../assets/zig-zag.png';
+import vsCode from '../assets/vs-code.png';
+import bulb from '../assets/bulb.png';
+import triangle from '../assets/triangle.png';
+import figma from '../assets/figma.png';
+import wordPress from '../assets/word-press.png';
+import { SoftSection } from '../components';
 
 const imgList = [
   {src:img1},
@@ -20,10 +26,20 @@ const imgList = [
   {src:img4},
   {src:img5}
 ]
+const imgList2 = [
+  {src:vsCode,className:css.vsCode},
+  {src:bulb,className:css.bulb},
+  {src:imgoo,className:css.imgoo2},
+  {src:triangle,className:css.triangle},
+  {src:figma,className:css.figma},
+  {src:wordPress,className:css.wordPress},
+  {src:imgo,className:css.imgo2},
+]
 const Home = () => {
   return (
     <main>
       <BannerWrapper>
+        <img src={pattern}  alt="background-pattern"/>
         <img src={pattern}  alt="background-pattern"/>
         <img src={pattern}  alt="background-pattern"/>
         <img src={pattern}  alt="background-pattern"/>
@@ -44,7 +60,7 @@ const Home = () => {
               </div>
               <div>
                 <ImageWrapper>
-                    {imgList?.map((eImg:any,index:number) => <img alt={`profile${index+1}`} src={eImg.src} />)}
+                    {imgList?.map((eImg:any,index:number) => <img alt={`profile${index+1}`} className={index == 2?'':index%2?css.ani2:css.ani1} src={eImg.src} />)}
                 </ImageWrapper>
                 <div>
                   <span>255k+</span>
@@ -60,9 +76,12 @@ const Home = () => {
               <div>
                 <img src={hero_girl}  alt="hero"/>
               </div>
+              {imgList2?.map(({src,className},index:number)=> <img src={src} className={className} alt={`alt-${index}`}/>)}
+              
           </HeroWrapper>
         </BannerContent>
       </BannerWrapper>
+      <SoftSection />
     </main>
   )
 }
@@ -127,7 +146,9 @@ const BannerContent = styled.div`
     }
     @media screen and ( max-width :810px ){
       &{
+        padding-top:30px;
         flex-direction:column;
+        gap:30px;
       }
       & > div{
         width:100%;
@@ -136,8 +157,9 @@ const BannerContent = styled.div`
         align-items:center;
       }
       & h1{
+        
         text-align:center;
-        font-size:5.5vw;
+        font-size:6vw;
       }
       & p{
         width:100%;
@@ -204,6 +226,7 @@ const ButtonLink = styled(BLink)`
 const ImageWrapper = styled.div`
     position:relative;
     & > img{
+      position:relative;
       width:60px;
       margin-left:-20px;
     }
@@ -218,7 +241,7 @@ const HeroWrapper = styled.div`
     display:flex;
     justify-content:center;
     align-items:flex-end;
-
+    position:relative;
     & > div{
       height:80%;
       display:flex;
