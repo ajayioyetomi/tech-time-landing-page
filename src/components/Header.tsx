@@ -51,7 +51,7 @@ const Header = () => {
     return ()=> window.removeEventListener('scroll',handleScroll); 
   },[])
   return (
-    <HeaderWrapper>
+    <HeaderWrapper style={{backgroundColor:isTop?'transparent':'var(--primary-background)'}}>
       <div style={{height:isTop?'110px':'80px'}}>
         <StyledLink to="/">
           <img style={{width:isTop?'120px':'100px'}} src={logo} alt="logo" />

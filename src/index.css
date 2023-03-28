@@ -1,3 +1,8 @@
+:root{
+  --main-width:90%;
+  --font-2: 'Clash Display', sans-serif;
+                                             
+}
 *{
   box-sizing: border-box !important;
   font-family: 'Satoshi Regular';
@@ -17,6 +22,3 @@ ul,p{
   padding:0;
 }
 
-:root{
-  --main-width:90%;
-}
