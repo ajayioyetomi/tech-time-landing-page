@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import pattern from '../assets/pattern.png';
-import { Link } from 'react-router-dom';
 import css from '../css/home.module.scss';
 import {FiArrowUpRight as ArrowIcon1} from 'react-icons/fi';
 import img1 from '../assets/img1.png';
@@ -17,7 +16,8 @@ import bulb from '../assets/bulb.png';
 import triangle from '../assets/triangle.png';
 import figma from '../assets/figma.png';
 import wordPress from '../assets/word-press.png';
-import { SoftSection } from '../components';
+import { SoftSection,HighQualitySection,ButtonLink } from '../components';
+
 
 const imgList = [
   {src:img1},
@@ -82,16 +82,12 @@ const Home = () => {
         </BannerContent>
       </BannerWrapper>
       <SoftSection />
+      <HighQualitySection/>
     </main>
   )
 }
 
 export default Home;
-
-const BLink = (props:any)=>{
-  return <Link {...props}>{props.children}</Link>
-}
-
 
 const BannerWrapper = styled.section`
   display:flex;
@@ -112,7 +108,7 @@ const BannerWrapper = styled.section`
     height:fit-content;
     min-height:400px;
   }
-`
+`;
 const BannerContent = styled.div`
     position:relative;
     z-index:1;
@@ -167,8 +163,7 @@ const BannerContent = styled.div`
       }
       
     }
-`
-
+`;
 const ButtonWrapper = styled.div`
     display:flex;
     flex-direction:column;
@@ -195,34 +190,6 @@ const ButtonWrapper = styled.div`
       font-size:21px;
     }
 `;
-
-const ButtonLink = styled(BLink)`
-    display:flex;
-    padding:12px 30px;
-    gap:10px;
-    align-items:center;
-    background-color:${props => props.bg};
-    color:${props => props.color};
-    border:${props => props.border};
-    border-radius:5px;
-    cursor:pointer;
-    font-weight:500;
-    & > span{
-      font-size:20px;
-      display:flex;
-      align-items:center;
-    }
-    @media only screen and (max-width: 470px){
-      &{
-        padding:9px 20px;
-        font-size:15px;
-      }
-      & > span{
-        font-size:17px;
-      }
-    }
-`
-
 const ImageWrapper = styled.div`
     position:relative;
     & > img{
@@ -235,8 +202,7 @@ const ImageWrapper = styled.div`
     }
   
     
-`
-
+`;
 const HeroWrapper = styled.div`
     display:flex;
     justify-content:center;
