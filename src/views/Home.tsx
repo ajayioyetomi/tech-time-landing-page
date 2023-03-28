@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import pattern from '../assets/pattern.png';
 import { Link } from 'react-router-dom';
+import css from '../css/home.module.scss';
 import {FiArrowUpRight as ArrowIcon1} from 'react-icons/fi';
 import img1 from '../assets/img1.png';
 import img2 from '../assets/img2.png';
@@ -8,6 +9,9 @@ import img3 from '../assets/img3.png';
 import img4 from '../assets/img4.png';
 import img5 from '../assets/img5.png';
 import hero_girl from '../assets/hero-girl.png';
+import imgoo from '../assets/oo.png';
+import imgo from '../assets/o.png';
+import zigZag from '../assets/zig-zag.png';
 
 const imgList = [
   {src:img1},
@@ -48,6 +52,9 @@ const Home = () => {
                 </div>
               </div>
             </ButtonWrapper>
+            <img className={css.imgoo} src={imgoo} alt="oo" />
+            <img className={css.imgo} src={imgo} alt="o" />
+            <img className={css.zigZag} src={zigZag} alt="zig-zag" />
           </div>
           <HeroWrapper>
               <div>
@@ -67,7 +74,7 @@ const BLink = (props:any)=>{
 }
 
 
-const BannerWrapper = styled.div`
+const BannerWrapper = styled.section`
   display:flex;
   justify-content:center;
   align-items:center;
@@ -100,6 +107,7 @@ const BannerContent = styled.div`
       flex-direction:column;
       justify-content:center;
       gap:30px;
+      position:relative;
     }
     & h1{
       
@@ -236,4 +244,5 @@ const HeroWrapper = styled.div`
       }
     }
 `
+
 

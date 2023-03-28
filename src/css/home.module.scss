@@ -1,0 +1,33 @@
+.absolute{
+    position:absolute;
+}
+.disapear-on-small-screen{
+    @media  screen and (max-width: 810px) {
+        display:none !important;
+    }
+}
+.imgoo{
+    top:30vh;
+    left:3vw;
+    width:10px;
+    @extend .absolute;
+    @extend .disapear-on-small-screen;
+}
+
+.imgo{
+    top:31vh;
+    right:14vw;
+    width:6px;
+    @extend .absolute;
+    @extend .disapear-on-small-screen
+    
+}
+
+.zigZag{
+    top:65vh;
+    left:-65px;
+    width:50px;
+    @extend .absolute;
+    @extend .disapear-on-small-screen
+    
+}
