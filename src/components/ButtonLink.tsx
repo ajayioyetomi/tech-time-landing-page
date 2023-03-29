@@ -44,7 +44,7 @@ export const ButtonLink = styled(ButtonL)`
 
 export const Button = styled(ButtonWrapper)`
 display:flex;
-padding:12px 35px;
+padding:12px 25px;
 gap:10px;
 align-items:center;
 background-color:${props => props.bg};
@@ -52,7 +52,6 @@ color:${props => props.color};
 border:${props => props.border};
 border-radius:5px;
 cursor:pointer;
-font-weight:500;
 & > span{
   font-size:20px;
   display:flex;
