@@ -16,7 +16,10 @@ import bulb from '../assets/bulb.png';
 import triangle from '../assets/triangle.png';
 import figma from '../assets/figma.png';
 import wordPress from '../assets/word-press.png';
-import { SoftSection,HighQualitySection,ButtonLink, BestSection } from '../components';
+import { 
+  SoftSection,HighQualitySection,
+  ButtonLink, BestSection,
+  CourseSection } from '../components';
 
 
 const imgList = [
@@ -84,6 +87,7 @@ const Home = () => {
       <SoftSection />
       <HighQualitySection/>
       <BestSection/>
+      <CourseSection />
     </main>
   )
 }
