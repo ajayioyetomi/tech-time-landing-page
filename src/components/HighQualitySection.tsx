@@ -4,14 +4,16 @@ import audioClass from '../assets/audio-class.png';
 import liveClass from '../assets/live-class.png';
 import recordedClass from '../assets/record-class.png';
 import imgoooo from '../assets/oooo.png';
-import ring from '../assets/ring.png';
-import yellowZigZap from '../assets/yellow-zig-zag.png';
-import droplet from '../assets/droplet.png';
-import profile from '../assets/enrolled-student.png';
+import ring from '../assets/side-ring.png';
+import yellowZigZag from '../assets/yellow-zig-zag.png';
+import greenZigZag from '../assets/green-zig-zag.png';
+import enrolledStudent from '../assets/enrolled-student.png';
+import droplet from '../assets/droplets.png';
 import notes from '../assets/notes.png';
 import { ButtonLink,Button } from './ButtonLink';
 import bigClass from '../assets/big-class.png';
 import smallClass from '../assets/small-class.png';
+import css from '../css/home.module.scss';
 
 const buttonStyle={
     fontWeight:'600',
@@ -23,8 +25,7 @@ const HighQualitySection = () => {
         <Container>
             <Item1>
                 <div>
-                    <img src={crown} alt="crown"/>
-                    high quality video, audio & live classes
+                    <span><img src={crown} alt="crown"/>High</span> quality video, audio & live classes
                 </div>
                 <div>
                     <p>
@@ -53,17 +54,21 @@ const HighQualitySection = () => {
                             Recorded Classes
                         </Button>
                         <Button style={buttonStyle} color="var(--dark-color)" bg="var(--white-color)" border="var(--white-color)">
-                            <img src={liveClass}alt="audio class"/>
-                            Life Classes
+                            <img src={notes}alt="notes"/>
+                            50+ Notes
                         </Button>
                     </ButtonContainer>
                 </div>
 
             </Item1>
             <Item2>
+                <img className={css.ring} src={ring} alt="ring"/>
                 <img className='big' src={bigClass} alt="b-class" />
+                <img className={css.enrolledStudent} src={enrolledStudent} alt="enrolled student" />
                 <img className='small' src={smallClass} alt="s-class" />
-
+                <img className={css.droplet} src={droplet} alt="droplet"/>
+                <img className={css.greenZigZag} src={greenZigZag} alt="green zig-zap" />
+                <img className={css.yellowZigZag} src={yellowZigZag} alt="yellow zig-zap" />
             </Item2>
         </Container>
     </Wrapper>
@@ -80,9 +85,10 @@ const Wrapper = styled.section`
     align-items:center;
     positon:relative;
     background-color:var(--light-background);
+    overflow-x:hidden;
     @media screen and (max-width:810px){
         &{
-            padding:100px 0;
+            padding:80px 0;
         }
     }
 `
@@ -92,6 +98,7 @@ const Container = styled.div`
     position:relative;
     display:flex;
     align-items:center;
+    
     & > div{
         width:50%;
     }
@@ -117,14 +124,18 @@ const Item1 = styled.div`
         font-weight:700;
         font-family:var(--font-2);
         color:var(--dark-color);
-
     }
-    & > div:first-of-type > img{
+    & > div:first-of-type > span{
+        font-weight:700;
+        font-family:var(--font-2);
+        position:relative;
+        display:inline-block;
+    }
+    & > div:first-of-type > span > img{
         position:absolute;
-        top:-23px;
-        left:-28px;
+        top:-25px;
+        left:-30px;
         width:45px;
-        
     }
 
     & > div:nth-of-type(2){
@@ -139,10 +150,23 @@ const Item1 = styled.div`
         margin:0;
     }
     & > div:nth-of-type(2) > div{
+        display:flex;
         flex:1;
     }
     & > div:nth-of-type(2) > div > a{
         width:fit-content;
+    }
+    @media screen and (max-width:810px){
+        & > div:first-of-type{
+            text-align:center;
+            font-size:5vw;
+        }
+        & > div:nth-of-type(2) > p{
+            text-align:center;
+        }
+        & > div:nth-of-type(2) > div{
+            justify-content:center;
+        }
     }
 `
 const Item2 = styled.div`
@@ -154,6 +178,8 @@ const Item2 = styled.div`
     & > img.big{
         width:85%;
         height:fit-content;
+        position:relative;
+        z-index:1;
     }
     & > img.small{
         position:absolute;
@@ -161,15 +187,21 @@ const Item2 = styled.div`
         left:-10%;
         bottom:-11vh;
         height:fit-content;
+        z-index:1;
+    }
+    @media screen and (max-width:950px){
+        & > img.small{
+            left:5%;
+        }
     }
     @media screen and (max-width:810px){
         & > img.big{
             width:75%;
         }
         & > img.small{
-            width:45%;
+            width:50%;
             bottom:-15%;
-            left:10%;
+            left:5%;
         }
     }
 `
@@ -181,5 +213,17 @@ const ButtonContainer = styled.div`
     &:nth-of-type(2){
         margin-top:20px;
         font-size:
+    }
+    @media screen and (max-width:810px){
+        justify-content:center;
+    }
+    @media screen and (max-width:550px){
+        & > button{
+            font-size:13px;
+            padding:13px 15px;
+        }
+        & > button > img{
+            width:20px;
+        }
     }
 `;
