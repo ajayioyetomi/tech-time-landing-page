@@ -20,7 +20,8 @@ import {
   SoftSection,HighQualitySection,
   ButtonLink, BestSection,
   CourseSection, 
-  ClientSection} from '../components';
+  ClientSection,
+  ConnectSection} from '../components';
 
 
 const imgList = [
@@ -90,6 +91,7 @@ const Home = () => {
       <BestSection/>
       <CourseSection />
       <ClientSection/>
+      <ConnectSection/>
     </main>
   )
 }

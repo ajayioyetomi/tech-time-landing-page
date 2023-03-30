@@ -5,4 +5,5 @@ export {default as HighQualitySection} from './HighQualitySection';
 export {default as BestSection} from './BestSection';
 export {default as CourseSection} from './CourseSection';
 export {default as ClientSection} from './ClientSection';
+export {default as ConnectSection} from './ConnectSection';
 export {ButtonLink} from './ButtonLink';
