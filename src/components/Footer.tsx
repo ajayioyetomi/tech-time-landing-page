@@ -19,8 +19,8 @@ const imgList = [
 const linkList = [
   {name:'Home',path:'/'},
   {name:'About Us',path:'/about'},
-  {name:'Our Courses',path:'/'},
-  {name:'Home',path:'/courses'},
+  {name:'Our Courses',path:'/courses'},
+  {name:'Home',path:'/'},
   {name:'Our Community',path:'/community'},
 ]
 const linkList2 = [

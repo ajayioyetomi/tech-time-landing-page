@@ -34,7 +34,7 @@ const imgList = [
 ]
 const imgList2 = [
   {src:vsCode,className:css.vsCode},
-  {src:bulb,className:css.bulb},
+  {src:bulb,className:`${css.bulb} ${css.animateB}`},
   {src:imgoo,className:css.imgoo2},
   {src:triangle,className:css.triangle},
   {src:figma,className:css.figma},

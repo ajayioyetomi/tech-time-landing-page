@@ -20,6 +20,7 @@ const Header = () => {
   const [activeMenu,setActiveMenu] = useState(false);
   const [activeIndex,setActiveIndex] = useState<number>(0);
   const [isTop,setIsTop] = useState<boolean>(true);
+  const [back,setBack] = useState<boolean>(false);
   const handleActiveLink = () =>{
       let path = location.pathname;
       let i,len = linkList.length;
@@ -32,9 +33,16 @@ const Header = () => {
           break;
         }
       }
+      if(path == '/'){
+        setBack(false);
+      }
+      else{
+        setBack(true);
+      }
   }
   useEffect(()=>{
-    handleActiveLink()
+    handleActiveLink();
+
   },[location.pathname])
   useEffect(()=>{
     const handleScroll = () =>{
@@ -51,7 +59,7 @@ const Header = () => {
     return ()=> window.removeEventListener('scroll',handleScroll); 
   },[])
   return (
-    <HeaderWrapper style={{backgroundColor:isTop?'transparent':'var(--primary-background)'}}>
+    <HeaderWrapper style={{backgroundColor:back?'var(--primary-color)':isTop?'transparent':'var(--primary-background)'}}>
       <div style={{height:isTop?'110px':'80px'}}>
         <StyledLink to="/">
           <img style={{width:isTop?'120px':'100px'}} src={logo} alt="logo" />
@@ -84,7 +92,7 @@ const HeaderWrapper = styled.header`
   align-items:center;
   justify-content:center;
   position:fixed;
-  z-index:100;
+  z-index:1000000;
   width:100%;
   top:0;
   left:0;
