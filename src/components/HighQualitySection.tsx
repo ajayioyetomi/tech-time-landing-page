@@ -163,6 +163,7 @@ const Item1 = styled.div`
         }
         & > div:nth-of-type(2) > p{
             text-align:center;
+            font-size:14px;
         }
         & > div:nth-of-type(2) > div{
             justify-content:center;

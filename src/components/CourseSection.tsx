@@ -248,6 +248,7 @@ const TopContainer = styled.div`
         }
         & > p{
             width:90%;
+            font-size:14px;
         }
     }
 `;

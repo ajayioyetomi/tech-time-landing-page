@@ -178,7 +178,8 @@ const Item1 = styled.div`
       }
       & > p{
         text-align:center;
-        width:100%;
+        width:90%;
+        font-size:14px;
       }
     
 

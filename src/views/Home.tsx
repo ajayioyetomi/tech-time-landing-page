@@ -19,7 +19,8 @@ import wordPress from '../assets/word-press.png';
 import { 
   SoftSection,HighQualitySection,
   ButtonLink, BestSection,
-  CourseSection } from '../components';
+  CourseSection, 
+  ClientSection} from '../components';
 
 
 const imgList = [
@@ -88,6 +89,7 @@ const Home = () => {
       <HighQualitySection/>
       <BestSection/>
       <CourseSection />
+      <ClientSection/>
     </main>
   )
 }
