@@ -113,6 +113,7 @@ const Wrapper = styled.section`
     }
 
     @media screen and (max-width:810px){
+      padding:30px 0;
       & > img.green-triangle{
         bottom:35vw;
         left:5px;

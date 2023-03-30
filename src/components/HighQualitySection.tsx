@@ -167,6 +167,11 @@ const Item1 = styled.div`
         & > div:nth-of-type(2) > div{
             justify-content:center;
         }
+        & > div:first-of-type > span > img{
+            top:-15px;
+            left:-15px;
+            width:25px;
+        }
     }
 `
 const Item2 = styled.div`
