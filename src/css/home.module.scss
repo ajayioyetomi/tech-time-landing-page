@@ -195,6 +195,37 @@ body{
     animation: aniProfile2 2s ease-in-out 0.5s 1  forwards;
 }
 
+.firstInd{
+    translate: 0;
+   
+}
+
+.secondInd{
+    translate: -30vw;
+    @media screen and (max-width:810px) {
+        translate:-60vw ;
+    }
+    @media screen and (max-width:610px) {
+        translate:-70vw ;
+    }
+}
+.thirdInd{
+    translate: -45vw;
+    @media screen and (max-width:810px) {
+        translate:-150vw ;
+    }
+
+}
+.forthInd{
+    translate: -58vw;
+    @media screen and (max-width:810px) {
+        translate:-210vw ;
+    }
+    @media screen and (max-width:610px) {
+        translate:-215vw ;
+    }
+}
+
 @keyframes aniProfile1 {
     0%{
         left:-10vw;
